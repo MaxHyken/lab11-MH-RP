@@ -1,3 +1,6 @@
+# https://github.com/MaxHyken/lab11-MH-RP/
+# Partner 1: Max Hyken
+# Partner 2: Rafael Penhas
 import unittest
 from calculator import *
 
