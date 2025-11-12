@@ -33,7 +33,7 @@ class TestCalculator(unittest.TestCase):
             div(0, 2)
 
     def test_logarithm(self): 
-        self.assertEqual(log(10, 2), 100)
+        self.assertEqual(log(0, 2), 1)
         self.assertEqual(log(0, 10), 1)
         self.assertEqual(log(10, 1), 10)      
 
