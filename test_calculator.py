@@ -43,16 +43,16 @@ class TestCalculator(unittest.TestCase):
     
     
     # Partner 1
-        def test_log_invalid_argument(self):
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             log(0, 5)
 
-        def test_hypotenuse(self): # 3 assertions
+    def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3, 4),5)
         self.assertEqual(hypotenuse(30, 40), 50)
         self.assertEqual(hypotenuse(300, 400), 500)
 
-        def test_sqrt(self):
+    def test_sqrt(self):
         self.assertEqual(square_root(4), 2)
         self.assertEqual(square_root(9), 3)
         with self.assertRaises(ValueError):
