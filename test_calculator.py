@@ -7,37 +7,39 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
 
     def test_add(self): 
-        self.assertEqual(add(3, 4)) = 7
-        self.assertEqual(add(-3, -4)) = -7
-        self.assertEqual(add(0, 0)) = 0
+        self.assertEqual(add(3, 4), 7)
+        self.assertEqual(add(-3, -4), -7)
+        self.assertEqual(add(0, 0), 0)
 
 
     def test_subtract(self):
-        self.assertEqual(sub(3, 4)) = -1
-        self.assertEqual(sub(-3, -4)) = 1
-        self.assertEqual(sub(5, 2)) = 3
+        self.assertEqual(sub(3, 4), -1)
+        self.assertEqual(sub(-3, -4), 1)
+        self.assertEqual(sub(5, 2), 3)
 
     def test_multiply(self): 
-        self.assertEqual(mul(3, 4)) = 12
-        self.assertEqual(mul(-3, -4)) = 12
-        self.assertEqual(mul(-5, 4)) = -20
-        self.assertEqual(mul(0, 0)) = 0
+        self.assertEqual(mul(3, 4), 12)
+        self.assertEqual(mul(-3, -4), 12)
+        self.assertEqual(mul(-5, 4), -20)
+        self.assertEqual(mul(0, 0), 0)
 
     def test_divide(self): 
-        self.assertEqual(div(8, 4)) = 2
-        self.assertEqual(div(10, -5)) = -2
-        self.assertEqual(div(0, 2)) = 0
+        self.assertEqual(div(4, 8), 2)
+        self.assertEqual(div(-5, 10), -2)
+        self.assertEqual(div(2, 0), 0)
 
     def test_divide_by_zero(self): 
-        self.assertEqual(div(5, 0)) = self.assertRaises(ZeroDivisionError)
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 2)
 
     def test_logarithm(self): 
-        self.assertEqual(log(10, 2)) = 100
-        self.assertEqual(log(0, 10)) = 1
-        self.assertEqual(log(10, 1)) = 10       
+        self.assertEqual(log(10, 2), 100)
+        self.assertEqual(log(0, 10), 1)
+        self.assertEqual(log(10, 1), 10)      
 
     def test_log_invalid_base(self): 
-        self.assertEqual(log(10, -1)) = self.assertRaises(ValueError)
+        with self.assertRaises(ValueError):
+            log(-1, 10)
     
     
     # Partner 1
